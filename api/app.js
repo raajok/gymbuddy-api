@@ -3,6 +3,7 @@ var express = require('express');
 var cors = require("cors");
 var mongoose = require('mongoose');
 const mongoString = process.env.DATABASE_URL;
+const PORT = process.env.PORT || 9000;
 
 mongoose.connect(mongoString);
 const database = mongoose.connection;
@@ -33,6 +34,6 @@ app.use('/api/', trainingRouter);
 // Router for programs page
 app.use('/api/programs', programsRouter);
 
-app.listen(9000, () => {
-  console.log(`Server started at ${9000}`);
+app.listen(PORT, () => {
+  console.log(`Server started at ${PORT}`);
 });
