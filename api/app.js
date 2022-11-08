@@ -26,7 +26,7 @@ var trainingRouter = require('./routes/training-routes');
 var programsRouter = require('./routes/programs-routes');
 
 // testing API connection
-app.use("/api/testAPI", testAPIRouter);
+app.use("/testAPI", testAPIRouter);
 
 // Router for training page
 app.use('/api/', trainingRouter);
